@@ -1,0 +1,285 @@
+/// TABLET LANDSCAPE (below 1200px)
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /*9px*/
+  }
+  .header {
+    padding: 0;
+    .logo {
+      margin-right: auto;
+    }
+    .container {
+      justify-content: initial;
+      gap: 4rem;
+    }
+  }
+  main {
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+  }
+  .footer {
+    padding: 17rem 4rem 6rem;
+  }
+  .header .container {
+    padding: 2rem;
+  }
+  .header .btn-outline {
+    padding: 0.8rem 2.4rem;
+  }
+  .logo__img {
+    width: 14rem;
+  }
+  .section-hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .hero__img {
+    transform: initial;
+  }
+  .heading-primary {
+    font-size: 4rem;
+  }
+  .section-features {
+    padding-bottom: 9rem;
+    .img-box img {
+      max-width: 100%;
+    }
+  }
+  .pricing {
+    margin-bottom: 11rem;
+  }
+  .pricing-plan {
+    height: 72rem;
+    padding: 4rem 0;
+  }
+  .section-map {
+    img {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+  .section-featured-in {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    img {
+      max-width: 20rem;
+    }
+  }
+  .section-testimonial {
+    margin-bottom: -10rem;
+  }
+
+  .testimonials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .testimonial:first-child {
+    border: 2px solid #ddd;
+  }
+  .buttons {
+    display: none;
+  }
+}
+/////////////////////////////////////////
+/// TABLET PORTRAIT (below 816px)
+@media (max-width: 51em) {
+  html {
+    font-size: 50%; /*8px*/
+  }
+  .heading-secondary {
+    font-size: 2.8rem;
+  }
+  .heading-tertiary
+  // HEADER
+  .header {
+    .btns {
+      margin-left: auto;
+    }
+    .btn-outline {
+      margin-inline-start: 1rem;
+      margin-inline-end: 1rem;
+    }
+  }
+  // styling mobile nav
+  .nav__list {
+    position: absolute;
+    top: 6.3rem;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30rem;
+    background-color: rgba(255, 255, 255, 0.9); //style background
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    transform: translateX(100%); //move outside viewport
+    transition: all 0.3s; // anmiation
+  }
+  // burger icon style and logic
+  .mob__nav {
+    display: block;
+  }
+  .nav__checkbox {
+    display: none;
+  }
+  .nav__label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  .burger_bar {
+    background-color: black;
+    height: 0.3rem;
+    width: 2.8rem;
+    transition: all 0.3s;
+  }
+  .nav__checkbox:checked ~ .nav__label {
+    .burger_bar:nth-child(1) {
+      transform: translateY(3px) rotate(40deg);
+    }
+    .burger_bar:nth-child(2) {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .burger_bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-40deg);
+    }
+  }
+  .header:has(.nav__checkbox:checked) .nav__list {
+    transform: translateX(0);
+  }
+  // HERO
+  .section-hero {
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+    .heading-primary {
+      margin-bottom: 1rem;
+    }
+    .description {
+      margin-bottom: 3rem;
+    }
+    .btn-cta {
+      padding: 1.35rem 5.35rem;
+    }
+    .img-box {
+      display: flex;
+      justify-content: center;
+    }
+    .hero__img {
+      width: 100%;
+    }
+  }
+  .section-statistics {
+    margin: 9rem auto;
+    padding: 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    align-self: center;
+  }
+  .stat-item {
+    justify-content: flex-start;
+    height: 10rem;
+  }
+  .stat-item:nth-child(2) {
+    border: none;
+    margin: 0;
+  }
+  .stat-text-box {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .section-features {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .pricing {
+    flex-direction: column;
+    padding: 0 2rem;
+    .img {
+      height: 18rem;
+    }
+  }
+  .section-featured-in img {
+    width: 12rem;
+  }
+  .header-testimonial {
+    gap: 1rem;
+  }
+  .testimonials {
+    padding: 5rem 0;
+  }
+  .arrow-btns .btn {
+    padding: 1.2rem;
+  }
+  .section-cta {
+    padding: 5rem;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  .footer {
+    padding-top: 20rem;
+  }
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: inherit;
+    .nav-list {
+      padding: 2rem 3rem;
+      gap: 0.5rem;
+    }
+  }
+  .footer-nav li:first-child {
+    margin: 0;
+  }
+}
+/////////////////////////////////////////
+/// MOBILE PHONE (below 432px)
+@media (max-width: 27em) {
+  .header .container {
+    flex-direction: column;
+    gap: 2rem;
+    .logo__img {
+      width: 10rem;
+    }
+    .btns {
+      font-size: 1.4rem;
+      margin-top: -7rem;
+      margin-inline-start: auto;
+      gap: 1rem;
+      .btn-outline {
+        margin-inline-start: 1rem;
+      }
+    }
+  }
+  .mob__nav {
+    margin-inline-start: auto;
+    margin-inline-end: 0.5rem;
+  }
+  .section-statistics {
+    margin: 5rem auto;
+  }
+  .testimonial {
+    padding: 2rem;
+    width: 32rem;
+  }
+  .testimonial .description {
+    font-size: 1.4rem;
+  }
+  .footer {
+    padding-top: 25rem;
+    .container {
+      gap: 4rem;
+    }
+  }
+}
