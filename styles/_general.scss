@@ -37,6 +37,9 @@ button {
   border: none;
   background-color: transparent;
 }
+main {
+  padding-top: 11.62rem;
+}
 /////////////////////////////////////////
 /// variables
 :root {
@@ -45,7 +48,8 @@ button {
   --font-boldest: 700;
 
   --color-main: #f53838;
-  --color-main-tint: #f53855;
+  --color-main-tint: #c42d2d;
+  // --color-main-tint: #f53855;
   --color-main-light: #ffecec;
 
   --colot-text-black: #0b132a;
@@ -107,21 +111,43 @@ button {
   transition: all 0.3s;
 }
 .btn-cta:hover {
-  transform: scale(1.02);
+  // transform: scale(1.02);
   box-shadow: 0rem 3.7rem 3.7rem -1rem var(--color-main-light);
   background-color: var(--color-main-tint);
 }
 .btn-outline {
+  position: relative;
   color: var(--color-main);
-  border: 2px solid var(--color-main);
   background-color: #fff;
+  border: 2px solid var(--color-main);
   border-radius: var(--radius-lg);
-  transition: all 0.3s;
+  z-index: 1; // to make it at the top of the :before
+  overflow: hidden; // prevent ::before from exceed its parent
+  transition: all 0.3s ease-in-out;
 }
-.btn-outline:hover {
-  transform: scale(1.02);
-  // box-shadow: var(--shadow-main);
+.btn-outline:hover,
+.btn-outline:active {
+  color: white;
 }
+.btn-outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; // to make it underneath its parent
+  // hover effect
+  background-color: var(--color-main);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-outline:hover::before {
+  transform: scaleX(1);
+}
+
 .boldest {
   font-weight: var(--font-boldest);
 }

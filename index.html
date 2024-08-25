@@ -8,13 +8,21 @@
       content="LaslesVPN is a private virtual network that has unique features and has high security."
     />
     <link rel="icon" href="images/logo/logo.png" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- My assets -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="/scripts/app.js" type="module"></script>
     <title>LaslesVPN</title>
   </head>
   <body>
@@ -30,11 +38,32 @@
         </div>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="#about" class="nav__link">About</a></li>
-            <li><a href="#features" class="nav__link">Features</a></li>
-            <li><a href="#pricing" class="nav__link">Pricing</a></li>
-            <li><a href="#testimonial" class="nav__link">Testimonials</a></li>
-            <li><a href="#help" class="nav__link">Help</a></li>
+            <li>
+              <a
+                href="#about"
+                class="nav__link nav__link--active"
+                id="about-navLink"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#features" class="nav__link" id="features-navLink"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#pricing" class="nav__link" id="pricing-navLink"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a href="#testimonial" class="nav__link" id="testimonial-navLink"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a href="#help" class="nav__link" id="help-navLink">Help</a>
+            </li>
           </ul>
         </nav>
         <div class="btns">
@@ -53,7 +82,7 @@
     </header>
 
     <main class="container">
-      <section class="section-hero">
+      <section class="section section-hero" id="about">
         <div class="text-box">
           <h1 class="heading-primary">
             Want anything to be easy with
@@ -84,7 +113,9 @@
             />
           </div>
           <div class="stat-text-box">
-            <span class="stat-num">90+</span>
+            <div class="stat-num__wrapper">
+              <span class="stat-num">90</span>+
+            </div>
             <span class="stat-type">Users</span>
           </div>
         </div>
@@ -96,7 +127,9 @@
             />
           </div>
           <div class="stat-text-box">
-            <span class="stat-num">30+</span>
+            <div class="stat-num__wrapper">
+              <span class="stat-num">30</span>+
+            </div>
             <span class="stat-type">Locations</span>
           </div>
         </div>
@@ -105,17 +138,19 @@
             <img src="images/icons/bx_bxs-server.svg" alt="icon of a server" />
           </div>
           <div class="stat-text-box">
-            <span class="stat-num">50+</span>
+            <div class="stat-num__wrapper">
+              <span class="stat-num">50</span>+
+            </div>
             <span class="stat-type">Servers</span>
           </div>
         </div>
       </section>
 
-      <section class="section-features" id="features">
+      <section class="section section-features" id="features">
         <picture class="img-box">
           <img src="images/Illustration 2.png" alt="image of a happy woman" />
         </picture>
-        <div class="text_box">
+        <div class="text-box">
           <h2 class="heading-secondary">
             We Provide Many Features You Can Use
           </h2>
@@ -160,7 +195,7 @@
         </div>
       </section>
 
-      <section class="section-pricing" id="pricing">
+      <section class="section section-pricing" id="pricing">
         <header class="header-pricing">
           <h2 class="heading-secondary">Choose Your Plan</h2>
           <p class="description">
@@ -329,8 +364,12 @@
             locations.
           </p>
         </header>
-        <picture class="img-box">
-          <img src="images/Huge-Global.png" alt="a map of the world" />
+        <picture class="map">
+          <img
+            class="map__img"
+            src="images/Huge-Global.png"
+            alt="a map of the world"
+          />
         </picture>
       </section>
 
@@ -362,7 +401,7 @@
         />
       </section>
 
-      <section class="section-testimonial" id="testimonial">
+      <section class="section section-testimonial" id="testimonial">
         <header class="header-testimonial">
           <h2 class="heading-secondary">
             Trusted by Thousands of Happy Customer
@@ -453,13 +492,20 @@
         </div>
         <div class="buttons">
           <div class="carosal-btns">
-            <button class="btn selected">&nbsp;</button>
-            <button class="btn">&nbsp;</button>
-            <button class="btn">&nbsp;</button>
-            <button class="btn">&nbsp;</button>
+            <button class="btn selected" aria-label="first testimonial">
+              &nbsp;
+            </button>
+            <button class="btn" aria-label="second testimonial">&nbsp;</button>
+            <button class="btn" aria-label="third testimonial">&nbsp;</button>
+            <button class="btn" aria-label="fourth testimonial">&nbsp;</button>
           </div>
           <div class="arrow-btns">
-            <button class="btn">
+            <button
+              class="btn"
+              aria-label="show previous testimonial"
+              title="Previous"
+              style="width: 200"
+            >
               <svg
                 class="arrow-icon"
                 width="20"
@@ -474,7 +520,7 @@
                 />
               </svg>
             </button>
-            <button class="btn">
+            <button class="btn" aria-label="show next testimonial" title="Next">
               <svg
                 class="arrow-icon"
                 width="20"
@@ -517,20 +563,28 @@
             has high security.
           </p>
           <div class="social-links">
-            <a href="#" class="social-link"
+            <a
+              href="#"
+              class="social-link"
+              aria-label="Facebook"
+              title="Facebook"
               ><img src="images/icons/Facebook.svg" alt="facebook" class="icon"
             /></a>
-            <a href="#" class="social-link"
+            <a href="#" class="social-link" aria-label="twitter" title="twitter"
               ><img src="images/icons/Twitter.svg" alt="twitter" class="icon"
             /></a>
-            <a href="#" class="social-link"
+            <a
+              href="#"
+              class="social-link"
+              aria-label="instagram"
+              title="instagram"
               ><img
                 src="images/icons/Instagram.svg"
                 alt="instagram"
                 class="icon"
             /></a>
-            <p class="copyright">©2020Lasles<span class="bolder">VPN</span></p>
           </div>
+          <p class="copyright">©2020Lasles<span class="bolder">VPN</span></p>
         </div>
         <nav class="footer-nav">
           <ul class="nav-list">
