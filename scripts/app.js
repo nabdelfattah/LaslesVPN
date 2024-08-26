@@ -70,6 +70,10 @@ const swiper = new Swiper('.swiper', {
 
 // Footer Navigation's Animation
 footerNavObserver(document.querySelectorAll(".nav-list"), 'moveBack')
+// SET CURRENT YRAR
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
 
 // Observer animation
 initObserver(document.querySelectorAll('.nav__link'), 'enlarge', 0.5);
