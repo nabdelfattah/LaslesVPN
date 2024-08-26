@@ -277,7 +277,11 @@
     }
   }
 }
-
+@media (min-width: 75em) {
+  .swiper-slide {
+    width: 40rem !important;
+  }
+}
 .enlarge {
   transform: scale(1) !important;
   opacity: 1 !important;
