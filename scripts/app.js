@@ -4,6 +4,14 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 // Apply Active Style to Navigation Links Based on Section Visibility
 sectionObserver(document.querySelectorAll('.section'))
 
+// Close Mobile navigagion when user click on a nav__link
+const navBtn = document.querySelector('.nav__checkbox')
+document.querySelectorAll('.nav__link').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    navBtn.click()
+  })
+})
+
 // statistics Counting Animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -72,7 +80,7 @@ initObserver(document.querySelector('.section-hero .text-box '), 'moveBack', 0.5
 initObserver(document.querySelector('.section-hero .img-box'), 'moveBack', 0.5);
 initObserver(document.querySelector('.section-features .text-box '), 'moveBack', 0.5);
 initObserver(document.querySelector('.section-features .img-box'), 'moveBack', 0.5);
-initObserver(document.querySelector('.section-statistics'), 'moveBack', 0.5);
+initObserver(document.querySelector('.section-statistics'), 'moveBack', 0.3);
 initObserver(document.querySelector('.header-pricing'), 'moveBack', 0.3);
 initObserver(document.querySelector('.pricing'), 'moveBack', 0.1);
 initObserver(document.querySelector('.header-map'), 'moveBack', 0.3);

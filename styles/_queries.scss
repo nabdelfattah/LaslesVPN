@@ -31,7 +31,7 @@
   }
   .section-hero {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 6rem;
   }
   .hero__img {
     transform: initial;
@@ -72,7 +72,7 @@
 }
 /////////////////////////////////////////
 /// TABLET PORTRAIT (below 816px)
-@media (max-width: 51em) {
+@media (max-width: 54em) {
   html {
     font-size: 50%;
   }
@@ -91,21 +91,26 @@
     }
   }
   // styling mobile nav
-  .nav__list {
+  .nav {
     position: absolute;
     top: 6.3rem;
     left: 0%;
     height: 100vh;
     width: 100vw;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding-bottom: 30rem;
     background-color: rgba(255, 255, 255, 0.9);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(10px);
     transform: translateX(100%);
     transition: all 0.3s;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
   // burger icon style and logic
   .mob__nav {
@@ -138,7 +143,7 @@
       transform: translateY(-10px) rotate(-40deg);
     }
   }
-  .header:has(.nav__checkbox:checked) .nav__list {
+  .header:has(.nav__checkbox:checked) .nav {
     transform: translateX(0);
   }
   // HERO
@@ -221,7 +226,7 @@
   }
   .footer-nav {
     flex-wrap: wrap;
-    justify-content: inherit;
+    justify-content: space-between;
     .nav-list {
       padding: 2rem 3rem;
       gap: 0.5rem;
@@ -235,18 +240,19 @@
 /// MOBILE PHONE (below 432px)
 @media (max-width: 27em) {
   .header .container {
-    flex-direction: column;
     gap: 2rem;
+    .logo {
+      flex: 1;
+    }
     .logo__img {
       width: 10rem;
     }
     .btns {
       font-size: 1.4rem;
-      margin-top: -7rem;
-      margin-inline-start: auto;
+
       gap: 1rem;
       .btn-outline {
-        margin-inline-start: 1rem;
+        display: none;
       }
     }
   }
