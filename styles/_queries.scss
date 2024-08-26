@@ -1,7 +1,7 @@
 /// TABLET LANDSCAPE (below 1200px)
 @media (max-width: 75em) {
   html {
-    font-size: 56.25%; /*9px*/
+    font-size: 56.25%;
   }
   .header {
     padding: 0;
@@ -69,24 +69,12 @@
   .section-testimonial {
     margin-bottom: -10rem;
   }
-
-  // .testimonials {
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-  //   gap: 3rem;
-  // }
-  // .testimonial:first-child {
-  //   border: 2px solid #ddd;
-  // }
-  // .buttons {
-  //   display: none;
-  // }
 }
 /////////////////////////////////////////
 /// TABLET PORTRAIT (below 816px)
 @media (max-width: 51em) {
   html {
-    font-size: 50%; /*8px*/
+    font-size: 50%;
   }
   .heading-secondary {
     font-size: 2.8rem;
@@ -113,11 +101,11 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 30rem;
-    background-color: rgba(255, 255, 255, 0.9); //style background
+    background-color: rgba(255, 255, 255, 0.9);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(10px);
-    transform: translateX(100%); //move outside viewport
-    transition: all 0.3s; // anmiation
+    transform: translateX(100%);
+    transition: all 0.3s;
   }
   // burger icon style and logic
   .mob__nav {

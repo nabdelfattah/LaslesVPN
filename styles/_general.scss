@@ -82,27 +82,27 @@ main {
 }
 .heading-primary {
   font-size: 5rem;
-  line-height: 1.4; /*70px*/
+  line-height: 1.4;
 }
 .heading-secondary {
   font-size: 3.5rem;
-  line-height: 1.424; /*50px*/
+  line-height: 1.424;
   max-width: 43.5rem;
 }
 .heading-tertiary {
   font-size: 1.8rem;
-  line-height: 1.6; /*30px*/
+  line-height: 1.6;
 }
 
 .description {
   font-size: 1.6rem;
-  line-height: 1.875; /*30px*/
+  line-height: 1.875;
   max-width: 55.5rem;
   color: var(--color-text-lighter);
 }
 .li {
   font-size: 1.4rem;
-  line-height: 2.142; /*30px*/
+  line-height: 2.142;
 }
 .btn-cta {
   color: #fff;
@@ -111,7 +111,6 @@ main {
   transition: all 0.3s;
 }
 .btn-cta:hover {
-  // transform: scale(1.02);
   box-shadow: 0rem 3.7rem 3.7rem -1rem var(--color-main-light);
   background-color: var(--color-main-tint);
 }
@@ -121,8 +120,8 @@ main {
   background-color: #fff;
   border: 2px solid var(--color-main);
   border-radius: var(--radius-lg);
-  z-index: 1; // to make it at the top of the :before
-  overflow: hidden; // prevent ::before from exceed its parent
+  z-index: 1;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
 .btn-outline:hover,
@@ -136,7 +135,7 @@ main {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1; // to make it underneath its parent
+  z-index: -1;
   // hover effect
   background-color: var(--color-main);
   transform: scaleX(0);
