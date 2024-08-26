@@ -50,14 +50,31 @@ function animateValue(obj, start, end, duration) {
 
 // Testimonial carousel
 const swiper = new Swiper('.swiper', {
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
+  // centeredSlides: true,
+  grabCursor: true,
+  mousewheel: true, 
+  slidesPerView: 1,
+  spaceBetween: 50,
+  breakpoints: {
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 30, 
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 50, 
+    },
   },
-  // Navigation arrows
+  pagination: {
+    el: '.carosal-btns',
+    clickable: true,
+    bulletActiveClass: "bullet--selected",
+    bulletClass: "bullet", 
+    bulletElement: 'button'
+  },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.testimonal-next-btn',
+    prevEl: '.testimonal-prev-btn',
   },
 });
 
