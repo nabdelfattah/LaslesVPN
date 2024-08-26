@@ -277,11 +277,15 @@
     }
   }
 }
+
+// Resolve testimonial carousel issues on large screens
 @media (min-width: 75em) {
   .swiper-slide {
     width: 40rem !important;
   }
 }
+
+// observer
 .enlarge {
   transform: scale(1) !important;
   opacity: 1 !important;
