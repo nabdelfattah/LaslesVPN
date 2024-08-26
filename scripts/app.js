@@ -82,7 +82,7 @@ initObserver(document.querySelector('.section-features .text-box '), 'moveBack',
 initObserver(document.querySelector('.section-features .img-box'), 'moveBack', 0.5);
 initObserver(document.querySelector('.section-statistics'), 'moveBack', 0.3);
 initObserver(document.querySelector('.header-pricing'), 'moveBack', 0.3);
-initObserver(document.querySelector('.pricing'), 'moveBack', 0.1);
+initObserver(document.querySelectorAll('.pricing-plan'), 'moveBack', 0.1);
 initObserver(document.querySelector('.header-map'), 'moveBack', 0.3);
 initObserver(document.querySelector('.map'), 'moveBack', 0.2);
 initObserver(document.querySelector('.header-testimonial'), 'moveBack', 0.3);
